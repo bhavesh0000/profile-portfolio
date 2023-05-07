@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+*{
+  margin: 1px;
+  padding: 5px;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  padding: 0px;
 }
+.navbar-box {
+  background-color: #69b1cbd4;
+  border: 1.5px solid rgba(240, 248, 248, 0.899);
+  padding: 0px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #201b1a;
+  color: palevioletred;
+  font-size: 2.0rem;
+}
+.home{
   display: flex;
   flex-direction: column;
+  font-size: 5.0rem;
+  justify-content: space-evenly;
+  color: #866d58;
+  height: 100vh;
+  padding: 0px 10%;
+}
+ .name {
+  font-size: 5.0rem;
+  color: #dd214c;
+  margin-bottom: 30px;
+}
+ .desc{
+  font-size: 3.4rem;
+  color: #dd214c;
+}
+.content {
+  margin-right: 30px;
+}
+.image-container{
+display: flex;
+align-items: center;
+}
+
+.profile-image {
+  width: auto;
+  height: auto;
+  margin-left: 900px;
+  margin-top: -600px;
+}
+
+.home font,
+.projects font {
+  color: rgba(211, 222, 136, 0.939);
+}
+.projects,
+.skills{
+  margin-top: 100px;
+  text-align: center;
+  color: #e8eaff;
+}
+.projects .wrapper{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  background-color: transparent;
+}
+.skill {
+  margin: 150px ;
+  margin-left: auto;
+}
+
+.skill h2 {
+  color: rgba(211, 222, 136, 0.939);
+}
+
+.skill ul {
+  list-style-type: disc;
+  margin-left: 0px;
+}
+
+.skill li {
+  font-size: 18px;
+}
+.category-list {
+  display: flex;
+}
+
+.category {
+  display: inline;
+  margin-right: 40px;
+  cursor: pointer;
+}
+/* Increase the gap between categories */
+.category:not(:last-child) {
+  margin-right: 200px;
+}
+.category :hover{
+  background-color: transparent;
+}
+
+.category ul {
+  display: none;
+  margin-top: 5px;
+  padding-left: 10px;
+  color: rgb(210, 190, 240);
+  
+}
+.category.active ul {
+  display: block;
+  
+}
+
+.category li {
+  list-style-type: disc;
+  font-size: 20px;
+}
+.mx-auto {
+  margin-top: 100px;
+  
+}
+.mx-auto h1{
+  text-align: center;
+  color: #dd214c;
+}
+.form-group{
+  margin-top: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: whitesmoke;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
