@@ -26,25 +26,34 @@ const contactSchema = new mongoose.Schema({
   message: String,
 })
 
-const Contact = mongoose.model('Contact', contactSchema)
+const Contact = mongoose.model("Contact", contactSchema)
 //route to handel form subission
- app.post('/contact', async (req, res)=>{
-   try{
-      //extract the form data
-      const{ name, email, message } = req.body;
-
-      const contact = new Contact({
-         name,
-         email,
-         message,
-      })
-       await contact.save()
-       res.status(200).json({message:`Contact Form Data save Successfully`})
-   }catch (error){
-      res.status(500).json({ error: 'An error occurred while saving the contact form data' })
+app.post('/api/contact', async (req, res) => {
+   try {
+     // Extract the form data
+     const { name, email, subject, message } = req.body;
+ 
+     const contact = new Contact({
+       name,
+       email,
+       subject,
+       message,
+     });
+ 
+     // Save the form data to MongoDB
+     await contact.save();
+ 
+     // Send a success response
+     res.status(200).json({ message: 'Contact form data saved successfully' });
+   } catch (error) {
+     // Send an error response
+     res.status(500).json({ error: 'An error occurred while saving the contact form data' });
    }
-})
-app.listen(5000, ()=>{
-   console.log(`Server started on port 5000`)
+ });
+ 
+ 
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, ()=>{
+   console.log(`server is running on port ${PORT}`)
 })
  

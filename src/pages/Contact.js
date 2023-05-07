@@ -17,7 +17,17 @@ const handleChange = (event)=>{
 const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-  };
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+    };
+    fetch('/api/contact', requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+};
+
 
   return (
     <Row>
