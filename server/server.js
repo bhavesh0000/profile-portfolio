@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require ("mongoose")
 const bodyParser = require("body-parser")
 const express = require("express")
@@ -12,7 +13,6 @@ app.use(cors());
 
 // connection to mongo db
 // password:e4emoqA6KvjlARaC
-
 
 mongoose.connect(process.env.CONNECTION_STRING,{
    useNewUrlParser: true,

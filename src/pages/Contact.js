@@ -22,7 +22,7 @@ const handleSubmit = (event) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
     };
-    fetch('/api/contact', requestOptions)
+    fetch('http://localhost:8000/api/contact', requestOptions)
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.log(error));
