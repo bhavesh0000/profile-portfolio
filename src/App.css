@@ -7,7 +7,7 @@
   padding: 0px;
 }
 .navbar-box {
-  background-color: #69b1cbd4;
+  background-color: #ffbfb0;
   border: 1.5px solid rgba(240, 248, 248, 0.899);
   padding: 0px;
 
@@ -133,6 +133,72 @@ align-items: center;
   margin-top: 10px;
   align-items: center;
   color: whitesmoke;
+}
+.contact-data {
+  border-left: 1px solid #dfdfdf;
+  padding-left: 40px;
+  display: block;
+  margin-top: 100px;
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* por page  */
+.positions-container {
+  margin: 80px;
+  align-items: center;
+}
+
+.positions-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+
+}
+
+.position-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.position-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.position-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.position-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.position-card a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #0077b6;
+}
+
+@media only screen and (min-width: 768px) {
+  .positions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .position-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 30px;
+  }
 }
 
 
